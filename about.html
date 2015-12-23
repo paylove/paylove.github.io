@@ -1,0 +1,182 @@
+---
+layout: page
+title: "About"
+description: "Hey, this is Hux."
+header-img: "img/about-bg.jpg"
+---
+
+<!-- Language Selector -->
+<select onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+    <option value="0" selected> 中文 Chinese </option>
+    <option value="1"> 英语 English </option>
+</select>
+
+<!-- Chinese Version -->
+<div class="zh">
+    <blockquote>
+        写写代码，做做设计，看看产品。<br>
+        世界那么大，我想去看看。
+    </blockquote>
+
+    <p>
+    程序员，前端工程师，2015 <a href="http://m.wepiao.com/index.html">@微信电影票</a>。2014~2015 北京淘宝（<a href="http://alitrip.com" target="_blank">@阿里旅行·去啊</a>），主攻 JavaScript 全栈，其他语言玩得像样了再写上，希望成为一名<a href="http://www.zhihu.com/question/19589966/answer/12550259">产品工程师</a>
+    </p>
+
+    <p>
+    设计师，UI/UX Designer，2014/2015 offered by 阿里/微软 ，动效设计师，2013 <a href="http://weibo.com/lxustudio">@LxU 工作室</a>；迷恋 OSX/iOS & Android & Windows，擅长 Layout/Typographic/Info-Arch/Usability
+    </p>
+
+    <p>
+    热衷于各类 Web & Mobile 产品，还不算个产品设计师。<a href="http://www.zhihu.com/people/huxpro">知乎</a>用户，手机收藏癖，轻微<a href="/tags/#职业病">职业病</a>，没事也想想用户痛点、行业趋势、商业模式
+    </p>
+
+    <p>
+    大学生，就读于中国传媒大学数字媒体艺术专业 12 级，准大四。学的东西杂七杂八，技术艺术交叉，也当过<a href="http://www.cucxsh.cn/" target="_blank">学生会</a>部长，负责些小互联网产品
+    </p>
+
+    <p>人类，唱唱通俗跳跳 HipHop ，也爱好打球游泳、摄影<del>把妹</del>，没事泡泡社交网络，水水微博知乎</p>
+
+    <p>哦对了，我叫<b>黄玄</b>
+
+    <hr>
+
+    做过的一些东西，右转<a href="/portfolio"> Portfolio 👉 </a>
+    <br>
+    <br>
+    最后附上认真版的简历:
+    <ul>
+        <li><a href="{{site.baseUrl}}/attach/2016_Hux_en_SE.pdf"> 2016_Hux_en_Sr.SE </a></li>
+        <li><a href="{{site.baseUrl}}/attach/2016_Hux_en_PD.pdf"> 2016_Hux_en_PD & UX </a></li>
+    </ul>
+</div>
+
+<!-- English Version -->
+<div class="en">
+    <blockquote>
+        Designer or Engineer, things in between.
+    </blockquote>
+
+    <p>Student, major in New Media Art of <a href="https://en.wikipedia.org/wiki/Communication_University_of_China">Communication University of China</a>, which is a interdisciplinary subject of technology and art, and now Senior.</p>
+
+    <p>Programmer, Senior Front-End Engineer of <a href="http://m.wepiao.com/index.html">Wechat Movie</a>, previous worked in <a href="http://alitrip.com" target="_blank">Alibaba Trip</a> as Front-End Engineer Intern for one year, looking for opportunities abroad.</p>
+
+    <p>Designer, offered as UI/UX Designer Intern by Alibaba Group, Microsoft Bing etc. Experienced in Motion Graphic Design, also familer with Layout and Typography.</p>
+
+    <p>Product Design and Product Management is also attractive and comfortable to me.</p>
+
+    <p>
+    You can call me English name <b>Hux</b>,<br>
+    And my Chinese name is <b>Huang Xuan</b>
+    </p>
+
+    <hr>
+    Some of my projects is put on my <a href="/portfolio"> Portfolio 👉 </a>
+    <br>
+    Interested in more details? Checkout my resumes:
+    <ul>
+        <li><a href="{{site.baseUrl}}/attach/2016_Hux_en_SE.pdf"> 2016_Hux_en_Sr.SE </a></li>
+        <li><a href="{{site.baseUrl}}/attach/2016_Hux_en_PD.pdf"> 2016_Hux_en_PD&UX </a></li>
+    </ul>
+</div>
+
+<!-- Handle Language Change -->
+<script type="text/javascript">
+    // get nodes
+    var $zh = document.querySelector(".zh");
+    var $en = document.querySelector(".en");
+    var $select = document.querySelector("select");
+
+    // bind hashchange event
+    window.addEventListener('hashchange', _render);
+
+    // handle render
+    function _render(){
+        var _hash = window.location.hash;
+        // en
+        if(_hash == "#en"){
+            $select.selectedIndex = 1;
+            $en.style.display = "block";
+            $zh.style.display = "none";
+        // zh by default
+        }else{
+            // not trigger onChange, otherwise cause a loop call.
+            $select.selectedIndex = 0;
+            $zh.style.display = "block";
+            $en.style.display = "none";
+        }
+    }
+
+    // handle select change
+    function onLanChange(index){
+        if(index == 0){
+            window.location.hash = "#zh"
+        }else{
+            window.location.hash = "#en"
+        }
+    }
+
+    // init
+    _render();
+</script>
+
+
+
+{% if site.duoshuo_username %}
+<!-- 多说评论框 start -->
+<div class="comment">
+    <div class="ds-thread"
+    {% if site.duoshuo_username == "huxblog" %}
+        data-thread-id="1187623191091085319"
+    {% else %}
+        data-thread-key="{{site.duoshuo_username}}/about"
+    {% endif %}
+
+    data-title="{{page.title}}"
+    data-url="{{site.url}}/about/"></div>
+</div>
+<!-- 多说评论框 end -->
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User hacking by Hux
+    var _user = '{{site.duoshuo_username}}';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+{% endif %}
+
+
+{% if site.disqus_username %}
+<!-- disqus 评论框 start -->
+<div class="comment">
+    <div id="disqus_thread" class="disqus-thread">
+
+    </div>
+</div>
+<!-- disqus 评论框 end -->
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "{{site.disqus_username}}";
+    var disqus_identifier = "{{site.disqus_username}}/{{page.url}}";
+    var disqus_url = "{{site.url}}{{page.url}}";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+{% endif %}
