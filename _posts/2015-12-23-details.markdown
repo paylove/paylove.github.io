@@ -3,7 +3,7 @@ layout:     post
 title:      "12/23日爱心募捐详情"
 subtitle:   " \"感谢大家，无以为报.\""
 date:       2015-12-23 23:59:00
-author:     "方淼，方治霞，方朋，方治乾联合发文"
+author:     "联合发文"
 header-img: "img/23love.jpg"
 tags:
     - 募捐详情

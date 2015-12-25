@@ -3,7 +3,7 @@ layout:     post
 title:      "当太阳在南回归线的时候，我们却收获了暖暖的阳光"
 subtitle:   " \"我们兄弟姐妹代表我们自己及大伯全家在此叩谢大家！.\""
 date:       2015-12-24 23:59:00
-author:     "方淼，方治霞，方朋，方治乾联合发文"
+author:     "联合发文"
 header-img: "img/hope.jpg"
 tags:
     - 感恩

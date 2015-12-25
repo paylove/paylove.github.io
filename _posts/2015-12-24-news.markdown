@@ -3,7 +3,7 @@ layout:     post
 title:      "12/24日动态"
 subtitle:   " \"我们会时刻关注，并把信息反馈给每位爱心人士!\""
 date:       2015-12-24 23:59:00
-author:     "方淼，方治霞，方朋，方治乾联合发文"
+author:     "联合发文"
 header-img: "img/hope.jpg"
 tags:
     - 感恩

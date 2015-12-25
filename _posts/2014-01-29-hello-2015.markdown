@@ -3,7 +3,7 @@ layout:     post
 title:      "一个乙肝毁了的家庭——爱心募捐"
 subtitle:   " \"pay your love.\""
 date:       2015-12-23 12:00:00
-author:     "方淼，方治霞，方朋，方治乾联合发文"
+author:     "联合发文"
 header-img: "img/post-bg-2015.jpg"
 tags:
     - 募捐
